@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APP</title>
+    <link rel="stylesheet" href="home-css.css" type="text/css">
+    <script src="/js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header><h1>Titulo</h1></header>
+    <div class="main-container">
+        <div class="left-container">
+            <ul>
+                <li><button id="page-1-b">PAGE1</button></li>
+                <li><button id="page-2-b">PAGE2</button></li>
+                <li><button id="page-3-b">PAGE3</button></li>
+                <li><button id="page-4-b">PAGE4</button></li>
+            </ul>
+        </div>
+        <div class="right-container">
+            <div class="page" id="page-1">
+                <div class="video-container">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/KfHXTtqXzVk" title="TUTORIAL IFC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p style="padding-top:10px">1Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                </div>
+            </div>
+            <div class="page" id="page-2">
+                <div class="video-container">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/KfHXTtqXzVk" title="TUTORIAL IFC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p style="padding-top:10px">2Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                </div>
+            </div>
+            <div class="page" id="page-3">
+                <div class="video-container">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/KfHXTtqXzVk" title="TUTORIAL IFC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p style="padding-top:10px">3Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                </div>
+            </div>
+            <div class="page" id="page-4">
+                <div class="video-container">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/KfHXTtqXzVk" title="TUTORIAL IFC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p style="padding-top:10px">4Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("#page-2, #page-3, #page-4").hide();
+                $("#page-1-b").click(function(){
+                    $("#page-2, #page-3, #page-4").hide();
+                    $("#page-1").show();
+                    event.preventDefault();
+                });
+                $("#page-2-b").click(function(){
+                    $("#page-1, #page-3, #page-4").hide();
+                    $("#page-2").show();
+                    event.preventDefault();
+                });
+                $("#page-3-b").click(function(){
+                    $("#page-1, #page-2, #page-4").hide();
+                    $("#page-3").show();
+                    event.preventDefault();
+                });
+                $("#page-4-b").click(function(){
+                    $("#page-1, #page-3, #page-2").hide();
+                    $("#page-4").show();
+                    event.preventDefault();
+                });
+            });
+    </script>
+</body>
+</html>
